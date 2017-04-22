@@ -1,0 +1,389 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/sindresorhus/multiline"
+
+    >multiline (v1.0.2)</a>
+</h1>
+<h4>Multiline strings in JavaScript</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multiline">module multiline</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multiline.multiline">
+            function <span class="apidocSignatureSpan"></span>multiline
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multiline.browser">
+            function <span class="apidocSignatureSpan">multiline.</span>browser
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multiline.index">
+            function <span class="apidocSignatureSpan">multiline.</span>index
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multiline.stripIndent">
+            function <span class="apidocSignatureSpan">multiline.</span>stripIndent
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multiline.browser">module multiline.browser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multiline.browser.browser">
+            function <span class="apidocSignatureSpan">multiline.</span>browser
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multiline.browser.stripIndent">
+            function <span class="apidocSignatureSpan">multiline.browser.</span>stripIndent
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multiline.index">module multiline.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multiline.index.index">
+            function <span class="apidocSignatureSpan">multiline.</span>index
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multiline.index.stripIndent">
+            function <span class="apidocSignatureSpan">multiline.index.</span>stripIndent
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multiline" id="apidoc.module.multiline">module multiline</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multiline.multiline" id="apidoc.element.multiline.multiline">
+        function <span class="apidocSignatureSpan"></span>multiline
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">multiline = function (fn) {
+	if (typeof fn !== &#x27;function&#x27;) {
+		throw new TypeError(&#x27;Expected a function&#x27;);
+	}
+
+	var match = reCommentContents.exec(fn.toString());
+
+	if (!match) {
+		throw new TypeError(&#x27;Multiline comment missing.&#x27;);
+	}
+
+	return match[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multiline.browser" id="apidoc.element.multiline.browser">
+        function <span class="apidocSignatureSpan">multiline.</span>browser
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">browser = function (fn) {
+	if (typeof fn !== &#x27;function&#x27;) {
+		throw new TypeError(&#x27;Expected a function&#x27;);
+	}
+
+	var match = reCommentContents.exec(fn.toString());
+
+	if (!match) {
+		throw new TypeError(&#x27;Multiline comment missing.&#x27;);
+	}
+
+	return match[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multiline.index" id="apidoc.element.multiline.index">
+        function <span class="apidocSignatureSpan">multiline.</span>index
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function (fn) {
+	if (typeof fn !== &#x27;function&#x27;) {
+		throw new TypeError(&#x27;Expected a function&#x27;);
+	}
+
+	var match = reCommentContents.exec(fn.toString());
+
+	if (!match) {
+		throw new TypeError(&#x27;Multiline comment missing.&#x27;);
+	}
+
+	return match[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multiline.stripIndent" id="apidoc.element.multiline.stripIndent">
+        function <span class="apidocSignatureSpan">multiline.</span>stripIndent
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripIndent = function (fn) {
+	return stripIndent(multiline(fn));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		&#x3c;h1&#x3e;❤ unicorns&#x3c;/h1&#x3e;
+	&#x3c;/body&#x3e;
+&#x3c;/html&#x3e;
+```
+
+### Strip indent
+
+You can use `multiline.<span class="apidocCodeKeywordSpan">stripIndent</span>()` to be able to indent your multiline string without
+ preserving the redundant leading whitespace.
+
+```js
+	var str = multiline.stripIndent(function(){/*
+			&#x3c;!doctype html&#x3e;
+			&#x3c;html&#x3e;
+				&#x3c;body&#x3e;
+					&#x3c;h1&#x3e;❤ unicorns&#x3c;/h1&#x3e;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multiline.browser" id="apidoc.module.multiline.browser">module multiline.browser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multiline.browser.browser" id="apidoc.element.multiline.browser.browser">
+        function <span class="apidocSignatureSpan">multiline.</span>browser
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">browser = function (fn) {
+	if (typeof fn !== &#x27;function&#x27;) {
+		throw new TypeError(&#x27;Expected a function&#x27;);
+	}
+
+	var match = reCommentContents.exec(fn.toString());
+
+	if (!match) {
+		throw new TypeError(&#x27;Multiline comment missing.&#x27;);
+	}
+
+	return match[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multiline.browser.stripIndent" id="apidoc.element.multiline.browser.stripIndent">
+        function <span class="apidocSignatureSpan">multiline.browser.</span>stripIndent
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripIndent = function (fn) {
+	return stripIndent(multiline(fn));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		&#x3c;h1&#x3e;❤ unicorns&#x3c;/h1&#x3e;
+	&#x3c;/body&#x3e;
+&#x3c;/html&#x3e;
+```
+
+### Strip indent
+
+You can use `multiline.<span class="apidocCodeKeywordSpan">stripIndent</span>()` to be able to indent your multiline string without
+ preserving the redundant leading whitespace.
+
+```js
+	var str = multiline.stripIndent(function(){/*
+			&#x3c;!doctype html&#x3e;
+			&#x3c;html&#x3e;
+				&#x3c;body&#x3e;
+					&#x3c;h1&#x3e;❤ unicorns&#x3c;/h1&#x3e;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multiline.index" id="apidoc.module.multiline.index">module multiline.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multiline.index.index" id="apidoc.element.multiline.index.index">
+        function <span class="apidocSignatureSpan">multiline.</span>index
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function (fn) {
+	if (typeof fn !== &#x27;function&#x27;) {
+		throw new TypeError(&#x27;Expected a function&#x27;);
+	}
+
+	var match = reCommentContents.exec(fn.toString());
+
+	if (!match) {
+		throw new TypeError(&#x27;Multiline comment missing.&#x27;);
+	}
+
+	return match[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multiline.index.stripIndent" id="apidoc.element.multiline.index.stripIndent">
+        function <span class="apidocSignatureSpan">multiline.index.</span>stripIndent
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripIndent = function (fn) {
+	return stripIndent(multiline(fn));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		&#x3c;h1&#x3e;❤ unicorns&#x3c;/h1&#x3e;
+	&#x3c;/body&#x3e;
+&#x3c;/html&#x3e;
+```
+
+### Strip indent
+
+You can use `multiline.<span class="apidocCodeKeywordSpan">stripIndent</span>()` to be able to indent your multiline string without
+ preserving the redundant leading whitespace.
+
+```js
+	var str = multiline.stripIndent(function(){/*
+			&#x3c;!doctype html&#x3e;
+			&#x3c;html&#x3e;
+				&#x3c;body&#x3e;
+					&#x3c;h1&#x3e;❤ unicorns&#x3c;/h1&#x3e;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
