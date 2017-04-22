@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-multiline",     "homepage": "https://github.com/npmdoc/node-npmdoc-multiline",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-multiline.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [multiline (v1.0.2)](https://github.com/sindresorhus/multiline)  [![npm package](https://img.shields.io/npm/v/npmdoc-multiline.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-multiline) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-multiline.svg)](https://travis-ci.org/npmdoc/node-npmdoc-multiline)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-multiline",
+    "keywords": [
+        "documentation",
+        "multiline"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_multiline.js",
+    "name": "npmdoc-multiline",
+    "nameAlias": "npmdoc_multiline",
+    "nameOriginal": "npmdoc-multiline",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-multiline.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "2017.4.23"
+}
